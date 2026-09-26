@@ -1,0 +1,58 @@
+{
+  "analysisId": "AN-P001-001",
+  "patientId": "P001",
+  "status": "COMPLETED",
+  "overallSeverity": "HIGH",
+  "summary": {
+    "totalFindings": 1,
+    "high": 1,
+    "moderate": 0,
+    "low": 0,
+    "dataGaps": 0
+  },
+  "findings": [
+    {
+      "findingId": "F-P001-001",
+      "ruleId": "DL-001",
+      "type": "DRUG_LAB",
+      "severity": "HIGH",
+      "title": "Lisinopril with elevated potassium",
+      "evidence": {
+        "medications": [
+          {
+            "name": "Lisinopril",
+            "rxCui": "29046"
+          }
+        ],
+        "labs": [
+          {
+            "name": "Potassium",
+            "loinc": "2823-3",
+            "value": 5.8,
+            "unit": "mmol/L"
+          }
+        ]
+      },
+      "risk": "Elevated potassium is a medication-safety concern in a patient receiving lisinopril.",
+      "source": {
+        "type": "FDA_DRUG_LABEL",
+        "provider": "DailyMed",
+        "evidenceIds": [
+          "EVID-002"
+        ]
+      },
+      "fhir": {
+        "detectedIssueId": "di-p001-dl001"
+      }
+    }
+  ],
+  "dataGaps": [],
+  "riskAssessment": {
+    "id": "ra-p001-001",
+    "level": "HIGH"
+  },
+  "aiExplanation": {
+    "text": "The safety engine flagged elevated potassium while lisinopril is active. The explanation is grounded only in the supplied medication, laboratory value, and deterministic rule result.",
+    "groundedInFindingsOnly": true
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-p005",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "https://example.org/fhir/CodeSystem/data-origin",
+        "code": "synthetic",
+        "display": "Synthetic demonstration data"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-p005",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://example.org/synthetic-patient-id",
+            "value": "P005"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "text": "Sam Demo",
+            "family": "Demo",
+            "given": [
+              "Sam"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1978-09-14"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "encounter-p005",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/patient-p005"
+        },
+        "period": {
+          "start": "2026-09-18T09:00:00-05:00",
+          "end": "2026-09-18T09:30:00-05:00"
+        },
+        "reasonCode": [
+          {
+            "text": "Insulin with level 2 hypoglycemia"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "medreq-p005-01",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "274783",
+              "display": "Insulin glargine"
+            }
+          ],
+          "text": "Insulin glargine"
+        },
+        "subject": {
+          "reference": "Patient/patient-p005"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-p005"
+        },
+        "authoredOn": "2026-09-01",
+        "dosageInstruction": [
+          {
+            "text": "20 units subcutaneously nightly"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-p005-01",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2345-7",
+              "display": "Glucose [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Glucose"
+        },
+        "subject": {
+          "reference": "Patient/patient-p005"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-p005"
+        },
+        "effectiveDateTime": "2026-09-18T08:00:00-05:00",
+        "valueQuantity": {
+          "value": 52,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "L"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 70,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            },
+            "text": "Prototype display range; hypoglycemia rule threshold is separately defined in rules."
+          }
+        ]
+      }
+    }
+  ]
+}

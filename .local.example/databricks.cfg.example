@@ -1,0 +1,8 @@
+# Copy to .local/databricks.cfg (git-ignored) if you prefer this format over DATABRICKS_HOST/DATABRICKS_TOKEN
+# in .local/providers.env. This is a PROJECT-LOCAL file, in the same shape as the real ~/.databrickscfg but
+# never read from your home directory -- only .local/databricks.cfg is consulted, and only as a fallback when
+# DATABRICKS_HOST/DATABRICKS_TOKEN are not already set by the environment or .local/providers.env.
+
+[DEFAULT]
+host = https://your-workspace.cloud.databricks.com
+token = dapi_your_personal_access_token_here

@@ -1,0 +1,9 @@
+{
+  "note": "Approved deviations from data/phase0_v1_0/expected/expected_results.json. The frozen package is left byte-identical (checksum-verified); overrides are applied only by the golden test. See docs/CHANGE_LOG.md.",
+  "patients": {
+    "P006": {
+      "expectedDataGapRuleIds": ["DG-001"],
+      "reason": "P006 has an active lisinopril order and no potassium result within 90 days (only eGFR). DG-001 as written therefore fires. The frozen expectation of no data gaps contradicts the frozen rule; the user chose to keep the rule and update the expectation. Overall stays MODERATE because a clinical finding (DDI-003) exists."
+    }
+  }
+}

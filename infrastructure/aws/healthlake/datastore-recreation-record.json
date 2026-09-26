@@ -1,0 +1,274 @@
+{
+  "_sanitizedExample": "This is a SANITIZED EXAMPLE for the public repository, not a live record. Every AWS account id, resource id/ARN, client token and job id below has been replaced with an obviously fictional placeholder; timestamps, S3 object sizes/ETags and the overall shape are preserved to show exactly what a real run of this workflow records and what 91_recreate.sh/40_lambda.sh expect to read from this file. The original, real record stays only in the private development repository.",
+  "recordedAt": "2026-09-19T19:17:36+00:00",
+  "purpose": "Everything needed to recreate the HealthLake datastore after its deletion (cost stop). Recorded BEFORE deletion.",
+  "datastore": {
+    "name": "medsafety-fhir-r4",
+    "id": "00000000000000000000000000000002",
+    "arn": "arn:aws:healthlake:us-east-1:123456789012:datastore/fhir/00000000000000000000000000000002",
+    "endpoint": "https://healthlake.us-east-1.amazonaws.com/datastore/00000000000000000000000000000002/r4/",
+    "createdAt": "2026-09-19T06:00:56.752000-05:00",
+    "region": "us-east-1",
+    "account": "123456789012",
+    "fhirVersion": "R4",
+    "authorizationStrategy": "AWS_AUTH",
+    "fineGrainedAuthorizationEnabled": false,
+    "encryption": {
+      "KmsEncryptionConfig": {
+        "CmkType": "CUSTOMER_MANAGED_KMS_KEY",
+        "KmsKeyId": "arn:aws:kms:us-east-1:123456789012:key/00000000-0000-0000-0000-000000000000"
+      }
+    },
+    "analyticsStatus": "PAUSED",
+    "nlpStatus": "DISABLED",
+    "defaultProfiles": [],
+    "backup": {
+      "Status": "DISABLED",
+      "BackupTagsEnabled": false
+    },
+    "tags": {
+      "Project": "medsafety-intelligence",
+      "Environment": "dev",
+      "Phase": "3",
+      "DataClass": "synthetic"
+    },
+    "createClientToken": "medsafety-phase3-ds-001 (a NEW token is needed to recreate: this one is bound to the deleted datastore)"
+  },
+  "importJob": {
+    "jobName": "medsafety-phase0-v1-import",
+    "jobId": "00000000000000000000000000000004",
+    "validationLevel": "strict",
+    "dataAccessRoleArn": "arn:aws:iam::123456789012:role/MedSafetyHealthLakeImportRole",
+    "inputS3Uri": "s3://medsafety-hl-import-123456789012-us-east-1/phase0-v1/",
+    "outputS3Uri": "s3://medsafety-hl-results-123456789012-us-east-1/phase0-v1/00000000000000000000000000000002-FHIR_IMPORT-00000000000000000000000000000004/",
+    "outputKmsKeyId": "arn:aws:kms:us-east-1:123456789012:key/00000000-0000-0000-0000-000000000000",
+    "progress": {
+      "TotalNumberOfScannedFiles": 6,
+      "TotalSizeOfScannedFilesInMB": 0.032575,
+      "TotalNumberOfImportedFiles": 6,
+      "TotalNumberOfResourcesScanned": 53,
+      "TotalNumberOfResourcesImported": 53,
+      "TotalNumberOfResourcesWithCustomerError": 0,
+      "TotalNumberOfFilesReadWithCustomerError": 0,
+      "Throughput": 0.0
+    },
+    "clientToken": "medsafety-phase0-v1-import-001 (a NEW token is needed to recreate)"
+  },
+  "s3ObjectsAtRecordTime": {
+    "medsafety-hl-import-123456789012-us-east-1": [
+      {
+        "key": "phase0-v1/Binary.ndjson",
+        "size": 1800,
+        "etag": "\"f8916a1641e0223a62f7d903c0176859\""
+      },
+      {
+        "key": "phase0-v1/DocumentReference.ndjson",
+        "size": 2350,
+        "etag": "\"80a88aacb236684d8e3f683299aedcc8\""
+      },
+      {
+        "key": "phase0-v1/Encounter.ndjson",
+        "size": 5073,
+        "etag": "\"8c5df0912fb60d9b5a4b6b0746b9f825\""
+      },
+      {
+        "key": "phase0-v1/MedicationRequest.ndjson",
+        "size": 7931,
+        "etag": "\"287982d137cef7921d64d57a2e3827ee\""
+      },
+      {
+        "key": "phase0-v1/Observation.ndjson",
+        "size": 11363,
+        "etag": "\"cc9503ddd478863e39be406e4d2c1561\""
+      },
+      {
+        "key": "phase0-v1/Patient.ndjson",
+        "size": 4058,
+        "etag": "\"b1a6d040e7a77f9fbdb9dc44fef17054\""
+      }
+    ],
+    "medsafety-hl-results-123456789012-us-east-1": [
+      {
+        "key": "phase0-v1/.healthlake_write_access_check_file.temp",
+        "size": 0,
+        "etag": "\"5dbe1c4619677e262540ac1f694c4aca\""
+      },
+      {
+        "key": "phase0-v1/00000000000000000000000000000002-FHIR_IMPORT-00000000000000000000000000000004/Manifest.json",
+        "size": 1221,
+        "etag": "\"7610d420c521dfd627777c1a6cfccfd1\""
+      },
+      {
+        "key": "phase0-v1/00000000000000000000000000000002-FHIR_IMPORT-00000000000000000000000000000004/SUCCESS/Binary.ndjson",
+        "size": 343,
+        "etag": "\"c890bda262796709b046ad35a5e2bfaa\""
+      },
+      {
+        "key": "phase0-v1/00000000000000000000000000000002-FHIR_IMPORT-00000000000000000000000000000004/SUCCESS/DocumentReference.ndjson",
+        "size": 399,
+        "etag": "\"8a5ce8b2ab16a1d27aaf69f72b3e7470\""
+      },
+      {
+        "key": "phase0-v1/00000000000000000000000000000002-FHIR_IMPORT-00000000000000000000000000000004/SUCCESS/Encounter.ndjson",
+        "size": 900,
+        "etag": "\"e428a2d7d1f8bbada32263c4cf612242\""
+      },
+      {
+        "key": "phase0-v1/00000000000000000000000000000002-FHIR_IMPORT-00000000000000000000000000000004/SUCCESS/MedicationRequest.ndjson",
+        "size": 1376,
+        "etag": "\"f000a1486221558075d3bea225001156\""
+      },
+      {
+        "key": "phase0-v1/00000000000000000000000000000002-FHIR_IMPORT-00000000000000000000000000000004/SUCCESS/Observation.ndjson",
+        "size": 980,
+        "etag": "\"51e5d2bf6e25e2b5f27db5f51cdfaf76\""
+      },
+      {
+        "key": "phase0-v1/00000000000000000000000000000002-FHIR_IMPORT-00000000000000000000000000000004/SUCCESS/Patient.ndjson",
+        "size": 860,
+        "etag": "\"20af7508c3545f8949c72f66f5e2d0ea\""
+      }
+    ]
+  },
+  "kms": {
+    "keyArn": "arn:aws:kms:us-east-1:123456789012:key/00000000-0000-0000-0000-000000000000",
+    "alias": "alias/medsafety-healthlake-cmk",
+    "state": "Enabled",
+    "keyPolicy": {
+      "Version": "2012-10-17",
+      "Id": "medsafety-healthlake-cmk",
+      "Statement": [
+        {
+          "Sid": "EnableIAMPolicies",
+          "Effect": "Allow",
+          "Principal": {
+            "AWS": "arn:aws:iam::123456789012:root"
+          },
+          "Action": "kms:*",
+          "Resource": "*"
+        }
+      ]
+    },
+    "note": "kms:ListGrants is not permitted for the deployer role, so HealthLake's grants on the key could not be listed before deletion."
+  },
+  "glueLakeFormation": {
+    "glueDatabase": "medsafety_fhir_r4_00000000000000000000000000000002_healthlake_view",
+    "type": "resource link created by HealthLake's analytics integration",
+    "targetAccount": "999999999999 (HealthLake service-side)",
+    "lakeFormationPermissionsAtRecordTime": [
+      {
+        "Principal": {
+          "DataLakePrincipalIdentifier": "arn:aws:iam::123456789012:role/MedSafetyPhase3DeployerRole"
+        },
+        "Resource": {
+          "Database": {
+            "CatalogId": "123456789012",
+            "Name": "medsafety_fhir_r4_00000000000000000000000000000002_healthlake_view"
+          }
+        },
+        "Permissions": [
+          "ALL",
+          "DESCRIBE",
+          "DROP"
+        ],
+        "PermissionsWithGrantOption": [
+          "ALL",
+          "DESCRIBE",
+          "DROP"
+        ],
+        "LastUpdated": "2026-09-19T06:00:29.588000-05:00",
+        "LastUpdatedBy": "arn:aws:iam::123456789012:role/MedSafetyPhase3DeployerRole"
+      },
+      {
+        "Principal": {
+          "DataLakePrincipalIdentifier": "IAM_ALLOWED_PRINCIPALS"
+        },
+        "Resource": {
+          "Database": {
+            "CatalogId": "123456789012",
+            "Name": "medsafety_fhir_r4_00000000000000000000000000000002_healthlake_view"
+          }
+        },
+        "Permissions": [
+          "ALL"
+        ],
+        "PermissionsWithGrantOption": []
+      }
+    ]
+  },
+  "iamRolesPreserved": [
+    "MedSafetyHealthLakeImportRole",
+    "MedSafetyHealthLakeAppRole",
+    "MedSafetyHealthLakeVerifierRole",
+    "MedSafetyPhase3DeployerRole",
+    "MedSafetyApiLambdaRole"
+  ],
+  "recreate": {
+    "steps": [
+      "1. Confirm the deleted datastore no longer exists; choose NEW client tokens.",
+      "2. aws healthlake create-fhir-datastore --datastore-name medsafety-fhir-r4 --datastore-type-version R4 --sse-configuration '{\"KmsEncryptionConfig\":{\"CmkType\":\"CUSTOMER_MANAGED_KMS_KEY\",\"KmsKeyId\":\"<kms.keyArn>\"}}' --analytics-configuration Status=PAUSED --tags Key=Project,Value=medsafety-intelligence Key=Environment,Value=dev Key=Phase,Value=3 Key=DataClass,Value=synthetic --client-token <new> (authorization AWS_AUTH is the default; analytics DISABLED is rejected at creation)",
+      "3. Wait for ACTIVE. The datastore ID and endpoint WILL DIFFER.",
+      "4. Fast go/no-go before the full V0-V19: `scripts/healthlake_verify.py --checks V0,V1,V2,V3,V4,V5` (capability statement, one read, identifier search, counts, patient-scoped search, Binary note match).",
+      "5. aws healthlake start-fhir-import-job --datastore-id <new> --job-name medsafety-phase0-v1-import --input-data-config S3Uri=s3://medsafety-hl-import-123456789012-us-east-1/phase0-v1/ --job-output-data-config 'S3Configuration={S3Uri=s3://medsafety-hl-results-123456789012-us-east-1/phase0-v1/,KmsKeyId=<kms.keyArn>}' --data-access-role-arn arn:aws:iam::123456789012:role/MedSafetyHealthLakeImportRole --validation-level strict --client-token <new>",
+      "6. Expect 53 scanned / 53 imported / 0 errors, then re-run 60_verify.sh (V0-V19) and the live golden parity.",
+      "5. Full V0-V19 (`scripts/healthlake_verify.py`, no --checks), then Phase 4: infrastructure/aws/api/20_role.sh and 40_lambda.sh (re-render the Lambda role and env with the new datastore ARN/id; no rebuild needed), then scripts/api_verify.py --mode lambda --checks A2,A3,A4,A5,A9,A14 (shortened), then infrastructure/aws/api/60_verify.sh (full A0-A16, A7/A8 stay --pending)."
+    ],
+    "scripts": "infrastructure/aws/healthlake/20_datastore.sh and 50_import.sh do steps 2-3 and 5-6 (change DS_CLIENT_TOKEN / JOB_CLIENT_TOKEN in env.sh first; clear the stale DS_ID/JOB_ID in .state).",
+    "importInputs": "the frozen import files in the import bucket (listed above) are byte-identical to data/phase0_v1_0 (SHA256SUMS.txt)",
+    "safeWorkflowTool": "infrastructure/aws/healthlake/91_recreate.sh -- read-only preflight (datastore truly gone, CMK enabled + alias intact, 3 IAM roles present, S3 object counts unchanged), refuses to reuse either client token recorded above, backs up then clears the stale DS_ID/DS_ARN/DS_ENDPOINT/DS_CREATED_AT/JOB_ID from .state/deploy.env, then prints the ordered by-hand command plan (steps 2-9 below). It creates nothing itself. RECREATE_DS_CLIENT_TOKEN=<new> RECREATE_JOB_CLIENT_TOKEN=<new> CONFIRM_RECREATE=yes ./91_recreate.sh",
+    "knownFootgunFixed": "50_import.sh previously fell back to a JOB_ID left in .state/deploy.env without checking it belonged to the current datastore; after a delete+recreate that JOB_ID belongs to the OLD (gone) datastore and describe-fhir-import-job would target the wrong datastore. Fixed: the job id is always re-resolved live, scoped to the current DS_ID (test: tests/unit/test_aws_scripts.py::test_import_never_trusts_a_job_id_left_in_state_by_a_previous_deleted_datastore)."
+  },
+  "deletion": {
+    "requestedAt": "2026-09-19T19:17:49Z",
+    "statusObserved": [
+      "DELETING (19:17:57Z-19:18:57Z)",
+      "DELETED (19:19:26Z)"
+    ],
+    "command": "aws healthlake delete-fhir-datastore --datastore-id 00000000000000000000000000000002 (deployer role MedSafetyPhase3DeployerRole; 90_teardown.sh was NOT run)",
+    "removedAutomaticallyByAws": [
+      "the HealthLake-created Glue resource-link database medsafety_fhir_r4_<id>_healthlake_view",
+      "the Lake Formation permissions that referenced that database (0 permission entries remain)"
+    ],
+    "unchanged": "KMS key (Enabled, alias kept, key policy unchanged), both S3 buckets (objects identical: key/size/etag), all five MedSafety IAM roles, Phase 4 Lambda/DynamoDB/API Gateway/log group",
+    "notVerifiable": "KMS grants created by HealthLake (kms:ListGrants denied to the deployer); RAM shares (ram:GetResourceShares denied); billing (no Cost Explorer access)"
+  },
+  "secondLifecycle": {
+    "note": "This section records the SECOND lifecycle (recreation) using 91_recreate.sh and the plan above, unchanged in this file. The original 'datastore'/'importJob'/'s3ObjectsAtRecordTime'/'deletion' sections above are the immutable historical record of the FIRST lifecycle and are not modified.",
+    "recreatedAt": "2026-09-23T00:35:54Z",
+    "datastore": {
+      "id": "00000000000000000000000000000001",
+      "arn": "arn:aws:healthlake:us-east-1:123456789012:datastore/fhir/00000000000000000000000000000001",
+      "endpoint": "https://healthlake.us-east-1.amazonaws.com/datastore/00000000000000000000000000000001/r4/",
+      "createdAt": "2026-09-22T19:50:58.584000-05:00",
+      "status": "ACTIVE",
+      "note": "New id, as expected -- never the deleted 00000000000000000000000000000002. Same CMK, R4, AWS_AUTH, analytics PAUSED, NLP DISABLED, same tags."
+    },
+    "clientTokensUsed": {
+      "datastore": "00000000-0000-0000-0000-000000000001",
+      "importJob": "00000000-0000-0000-0000-000000000002",
+      "note": "Both are new UUIDs, neither equal to the tokens recorded above for the deleted datastore/job (91_recreate.sh verified this before proceeding)."
+    },
+    "importJob": {
+      "jobId": "00000000000000000000000000000003",
+      "result": "6/6 files, 53/53/0/0 (scanned/imported/customerError/serverError)"
+    },
+    "verification": {
+      "healthlakeVerifyV0toV19": "20/20 passed",
+      "deterministicLiveParity": "13/13 passed (tests/live_aws, P001-P010 + patient list + golden outcomes + no-write confirmation)",
+      "resourceCounts": {"Patient": 10, "Encounter": 10, "MedicationRequest": 14, "Observation": 11, "DocumentReference": 4, "Binary": 4, "DetectedIssue": 0, "RiskAssessment": 0}
+    },
+    "iamUpdatedToTheNewDatastoreArn": [
+      "MedSafetyHealthLakeImportRole (trust + ImportAccess)",
+      "MedSafetyHealthLakeAppRole (FhirDataPlane)",
+      "MedSafetyHealthLakeVerifierRole (VerifierAccess)",
+      "MedSafetyApiLambdaRole (BaseAccess -- also gained healthlake:GetCapabilities, a genuine gap found live; see docs/CHANGE_LOG.md)"
+    ],
+    "deletedIdReferenceSweep": "confirmed absent from all four live IAM roles' trust/policies and from active local state; intentionally retained only in this file's historical sections above and in test fixtures/docs/CHANGE_LOG.md/docs/PHASE3_HEALTHLAKE.md",
+    "glueLakeFormation": {
+      "glueDatabase": "medsafety_fhir_r4_00000000000000000000000000000001_healthlake_view",
+      "note": "Auto-recreated by HealthLake itself for the new datastore id, mirroring what was auto-removed on deletion (see 'deletion.removedAutomaticallyByAws' above); not explicitly enabled by any script in this repo."
+    },
+    "openaiDeployment": "The OpenAI (gpt-5.6-luna) Phase 5 deployment (ADR-0011, docs/PHASE5_OPENAI_DEPLOYMENT.md) was executed against this same recreation, re-pointing MedSafetyApiLambdaRole and the Lambda's HEALTHLAKE_DATASTORE_ID at this new datastore in the same pass.",
+    "datastoreStatusAtEndOfThisSession": "ACTIVE -- deletion explicitly withheld per instruction; requires separate explicit approval before any future teardown."
+  }
+}

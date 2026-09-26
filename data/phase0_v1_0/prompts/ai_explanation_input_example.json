@@ -1,0 +1,71 @@
+{
+  "patientId": "P008",
+  "structuredData": {
+    "patient": {
+      "id": "P008",
+      "name": "Lisa Demo",
+      "age": 68,
+      "sex": "female"
+    },
+    "medications": [
+      {
+        "name": "Lisinopril",
+        "rxCui": "29046",
+        "dosage": "20 mg once daily"
+      },
+      {
+        "name": "Ibuprofen",
+        "rxCui": "5640",
+        "dosage": "400 mg every 8 hours as needed"
+      }
+    ],
+    "labs": [
+      {
+        "name": "Potassium",
+        "loinc": "2823-3",
+        "value": 5.9,
+        "unit": "mmol/L",
+        "interpretation": "H",
+        "effectiveDate": "2026-09-18"
+      },
+      {
+        "name": "eGFR",
+        "loinc": "98979-8",
+        "value": 48,
+        "unit": "mL/min/{1.73_m2}",
+        "interpretation": "L",
+        "effectiveDate": "2026-09-18"
+      }
+    ],
+    "documents": [
+      {
+        "id": "DOC-P008-01",
+        "type": "Discharge Summary",
+        "date": "2026-09-18"
+      }
+    ]
+  },
+  "deterministicFindings": [
+    {
+      "ruleId": "DDI-003",
+      "type": "DRUG_DRUG",
+      "severity": "MODERATE",
+      "title": "Lisinopril with ibuprofen",
+      "finding": "Concurrent NSAID use can worsen renal function in susceptible patients; renal function should be monitored.",
+      "evidenceIds": [
+        "EVID-003"
+      ]
+    },
+    {
+      "ruleId": "DL-001",
+      "type": "DRUG_LAB",
+      "severity": "HIGH",
+      "title": "Lisinopril with elevated potassium",
+      "finding": "Elevated potassium is a medication-safety concern in a patient receiving lisinopril.",
+      "evidenceIds": [
+        "EVID-002"
+      ]
+    }
+  ],
+  "unstructuredContext": "Recent discharge summary lists lisinopril as a chronic medication and ibuprofen as an as-needed medication. Potassium was elevated on follow-up testing."
+}

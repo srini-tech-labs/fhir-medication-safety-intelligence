@@ -1,0 +1,26 @@
+{
+  "patient": {
+    "id": "P001",
+    "name": "Alex Demo",
+    "age": 67,
+    "sex": "male"
+  },
+  "medications": [
+    {
+      "name": "Lisinopril",
+      "rxCui": "29046",
+      "dosage": "20 mg once daily"
+    }
+  ],
+  "labs": [
+    {
+      "name": "Potassium",
+      "loinc": "2823-3",
+      "value": 5.8,
+      "unit": "mmol/L",
+      "interpretation": "H",
+      "effectiveDate": "2026-09-17"
+    }
+  ],
+  "documents": []
+}

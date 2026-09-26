@@ -1,0 +1,11 @@
+patient_id,name,gender,birth_date,scenario,medications,labs,unstructured_note,expected_overall,expected_rules
+P001,Alex Demo,male,1959-04-12,Lisinopril with elevated potassium,Lisinopril (20 mg once daily),Potassium=5.8 mmol/L [H] on 2026-09-17,No,HIGH,DL-001
+P002,Maya Demo,female,1954-11-03,Warfarin plus aspirin,Warfarin (5 mg once daily); Aspirin (81 mg once daily),INR=2.6 {INR} [N] on 2026-09-17,Yes,HIGH,DDI-001
+P003,Daniel Demo,male,1962-06-19,Warfarin plus ibuprofen,Warfarin (5 mg once daily); Ibuprofen (400 mg every 8 hours as needed),INR=2.8 {INR} [N] on 2026-09-17,No,HIGH,DDI-002
+P004,Priya Demo,female,1956-01-21,Metformin with severe renal impairment,Metformin (500 mg twice daily),eGFR=26 mL/min/{1.73_m2} [L] on 2026-09-17,No,HIGH,DL-002
+P005,Sam Demo,male,1978-09-14,Insulin with level 2 hypoglycemia,Insulin glargine (20 units subcutaneously nightly),Glucose=52 mg/dL [L] on 2026-09-18,No,HIGH,DL-003
+P006,Emma Demo,female,1949-05-08,Lisinopril plus ibuprofen,Lisinopril (20 mg once daily); Ibuprofen (400 mg twice daily as needed),eGFR=52 mL/min/{1.73_m2} [L] on 2026-09-16,Yes,MODERATE,DDI-003
+P007,Ravi Demo,male,1966-02-10,Warfarin with INR above 4,Warfarin (5 mg once daily),INR=4.8 {INR} [H] on 2026-09-18,No,HIGH,DL-004
+P008,Lisa Demo,female,1958-08-02,Multiple findings: lisinopril/ibuprofen plus elevated potassium,Lisinopril (20 mg once daily); Ibuprofen (400 mg every 8 hours as needed),Potassium=5.9 mmol/L [H] on 2026-09-18; eGFR=48 mL/min/{1.73_m2} [L] on 2026-09-18,Yes,HIGH,"DDI-003,DL-001"
+P009,Jordan Demo,male,1981-03-28,Negative control: metformin with preserved renal function,Metformin (500 mg twice daily),eGFR=82 mL/min/{1.73_m2} [N] on 2026-09-17; Glucose=118 mg/dL [N] on 2026-09-17,No,NONE,
+P010,Nina Demo,female,1961-12-01,Data gap: lisinopril without a recent potassium result,Lisinopril (10 mg once daily),None,Yes,NEEDS_DATA,DG-001

@@ -1,0 +1,1 @@
+Medication reconciliation documents over-the-counter ibuprofen use for knee pain while the patient is taking lisinopril. This note is context only and must not create a new finding by itself.

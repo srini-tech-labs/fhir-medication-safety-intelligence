@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/analysis-response.schema.json",
+  "title": "Medication Safety Analysis Response",
+  "type": "object",
+  "required": [
+    "analysisId",
+    "patientId",
+    "status",
+    "overallSeverity",
+    "summary",
+    "findings",
+    "dataGaps"
+  ],
+  "properties": {
+    "analysisId": {
+      "type": "string"
+    },
+    "patientId": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "COMPLETED",
+        "FAILED"
+      ]
+    },
+    "overallSeverity": {
+      "enum": [
+        "HIGH",
+        "MODERATE",
+        "LOW",
+        "NONE",
+        "NEEDS_DATA"
+      ]
+    },
+    "summary": {
+      "type": "object"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "dataGaps": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "riskAssessment": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "aiExplanation": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "groundedInFindingsOnly": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

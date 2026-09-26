@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "ruleType": "DATA_GAP",
+  "rules": [
+    {
+      "ruleId": "DG-001",
+      "drug": {
+        "name": "Lisinopril",
+        "rxcui": "29046"
+      },
+      "requiredLab": {
+        "name": "Potassium",
+        "loinc": "2823-3"
+      },
+      "lookbackDays": 90,
+      "result": "NEEDS_DATA",
+      "title": "Recent potassium result unavailable",
+      "finding": "The prototype cannot complete the lisinopril/potassium safety check because no recent potassium result is available.",
+      "evidenceIds": [
+        "EVID-002"
+      ],
+      "important": "The 90-day lookback is a prototype configuration for demonstrating a data-gap workflow. The cited label says potassium should be monitored periodically but does not specify a universal 90-day interval."
+    }
+  ]
+}

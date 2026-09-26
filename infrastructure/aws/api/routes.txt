@@ -1,0 +1,10 @@
+# The API Gateway surface = the documented contract, nothing else (FastAPI's /docs and /openapi.json are NOT exposed).
+GET  /v1/health
+GET  /v1/ready
+GET  /v1/patients
+GET  /v1/patients/{patient_id}/snapshot
+POST /v1/patients/{patient_id}/analyses
+GET  /v1/patients/{patient_id}/analyses/latest
+POST /v1/patients/{patient_id}/analyses/{analysis_id}/explanation
+POST /v1/patients/{patient_id}/analyses/{analysis_id}/persist
+GET  /v1/patients/{patient_id}/documents/{document_id}

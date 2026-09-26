@@ -1,0 +1,9 @@
+{"Version":"2012-10-17","Statement":[
+ {"Sid":"FhirDataPlane","Effect":"Allow","Action":["healthlake:ReadResource","healthlake:SearchWithGet","healthlake:SearchWithPost","healthlake:GetCapabilities","healthlake:CreateResource","healthlake:UpdateResource"],"Resource":"arn:aws:healthlake:us-east-1:${ACCT}:datastore/fhir/${DS}"},
+ {"Sid":"Describe","Effect":"Allow","Action":"healthlake:DescribeFHIRDatastore","Resource":"arn:aws:healthlake:us-east-1:${ACCT}:datastore/fhir/${DS}"},
+ {"Sid":"CmkViaHealthLake","Effect":"Allow","Action":["kms:Decrypt","kms:GenerateDataKey","kms:DescribeKey"],"Resource":"${KEY_ARN}","Condition":{"StringEquals":{"kms:ViaService":"healthlake.us-east-1.amazonaws.com"}}},
+ {"Sid":"VerifierHistoryVreadBundles","Effect":"Allow","Action":["healthlake:GetHistoryByResourceId","healthlake:VersionReadResource","healthlake:ProcessBundle"],"Resource":"arn:aws:healthlake:us-east-1:${ACCT}:datastore/fhir/${DS}"},
+ {"Sid":"VerifierCleanup","Effect":"Allow","Action":"healthlake:DeleteResource","Resource":"arn:aws:healthlake:us-east-1:${ACCT}:datastore/fhir/${DS}"},
+ {"Sid":"VerifierImportJobs","Effect":"Allow","Action":["healthlake:DescribeFHIRImportJob","healthlake:ListFHIRImportJobs"],"Resource":["arn:aws:healthlake:us-east-1:${ACCT}:datastore/fhir/${DS}","arn:aws:healthlake:us-east-1:${ACCT}:datastore/fhir/${DS}/import-job/*"]},
+ {"Sid":"ReadImportResults","Effect":"Allow","Action":["s3:GetObject","s3:ListBucket"],"Resource":["arn:aws:s3:::${RESULTS_BUCKET}","arn:aws:s3:::${RESULTS_BUCKET}/phase0-v1/*"]},
+ {"Sid":"DecryptImportResults","Effect":"Allow","Action":"kms:Decrypt","Resource":"${KEY_ARN}"}]}

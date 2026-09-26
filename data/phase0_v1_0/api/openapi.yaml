@@ -1,0 +1,111 @@
+openapi: 3.0.3
+info:
+  title: FHIR Medication Safety Intelligence API
+  version: 1.0.0
+  description: >
+    Stable application-layer contract. The frontend MUST use these endpoints and MUST NOT parse raw
+    HealthLake FHIR responses. Repository implementations may change from local JSON to S3 to HealthLake
+    without changing this API contract.
+servers:
+  - url: http://localhost:8000
+    description: Local development
+paths:
+  /v1/health:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: { type: string, example: ok }
+  /v1/patients:
+    get:
+      summary: List synthetic patients
+      responses:
+        '200':
+          description: Patient list
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  patients:
+                    type: array
+                    items:
+                      type: object
+  /v1/patients/{patientId}/snapshot:
+    get:
+      summary: Get application-friendly patient snapshot
+      parameters:
+        - in: path
+          name: patientId
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Patient snapshot
+          content:
+            application/json:
+              schema:
+                $ref: '../schemas/patient-snapshot.schema.json'
+        '404':
+          description: Patient not found
+  /v1/patients/{patientId}/analyses:
+    post:
+      summary: Run deterministic medication-safety analysis and optionally generate a grounded AI explanation
+      parameters:
+        - in: path
+          name: patientId
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Completed analysis
+          content:
+            application/json:
+              schema:
+                $ref: '../schemas/analysis-response.schema.json'
+        '404':
+          description: Patient not found
+  /v1/patients/{patientId}/analyses/latest:
+    get:
+      summary: Return latest saved analysis
+      parameters:
+        - in: path
+          name: patientId
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Latest analysis
+          content:
+            application/json:
+              schema:
+                $ref: '../schemas/analysis-response.schema.json'
+  /v1/patients/{patientId}/documents/{documentId}:
+    get:
+      summary: Return unstructured clinical note content
+      parameters:
+        - in: path
+          name: patientId
+          required: true
+          schema: { type: string }
+        - in: path
+          name: documentId
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Clinical note
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id: { type: string }
+                  type: { type: string }
+                  text: { type: string }

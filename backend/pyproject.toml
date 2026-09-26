@@ -1,0 +1,31 @@
+[project]
+name = "medication-safety-backend"
+version = "1.0.0"
+description = "Deterministic medication-safety engine over synthetic FHIR R4 data (educational prototype)"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "pydantic>=2.7",
+]
+
+[project.optional-dependencies]
+llm = ["anthropic>=0.40"]
+aws = ["boto3>=1.35", "httpx>=0.27"]  # HealthLake SigV4 client (DATA_BACKEND=healthlake)
+lambda = ["mangum>=0.17", "boto3>=1.43.98", "httpx>=0.27"]  # AWS Lambda package (API Gateway proxy, Bedrock Converse, DynamoDB); pin boto3 for outputConfig
+eval = ["openai>=1.0", "google-genai>=0.3"]  # multi-provider evaluation harness: OpenAI + Databricks (openai-compatible) + Gemini
+dev = [
+  "pytest>=8",
+  "httpx>=0.27",
+  "jsonschema>=4.22",
+  "anthropic>=0.40",
+  "boto3>=1.35",
+  "mangum>=0.17",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]

@@ -1,0 +1,32 @@
+{
+  "resourceType": "DetectedIssue",
+  "id": "di-p008-dl001",
+  "meta": {
+    "tag": [
+      {
+        "system": "https://example.org/fhir/CodeSystem/data-origin",
+        "code": "synthetic",
+        "display": "Synthetic demonstration data"
+      }
+    ]
+  },
+  "status": "final",
+  "code": {
+    "text": "Drug-lab safety concern"
+  },
+  "severity": "high",
+  "patient": {
+    "reference": "Patient/patient-p008"
+  },
+  "identifiedDateTime": "2026-09-18T12:00:00-05:00",
+  "implicated": [
+    {
+      "reference": "MedicationRequest/medreq-p008-01"
+    },
+    {
+      "reference": "Observation/obs-p008-01"
+    }
+  ],
+  "detail": "DL-001: Elevated potassium is a medication-safety concern in a patient receiving lisinopril.",
+  "reference": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d8a0c806-8f5e-41c0-91c6-ad267af27a53"
+}

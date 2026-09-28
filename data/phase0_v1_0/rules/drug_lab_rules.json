@@ -1,0 +1,89 @@
+{
+  "version": "1.0.0",
+  "ruleType": "DRUG_LAB",
+  "severityDisclaimer": "Prototype severity classification only; not a validated clinical decision-support severity scale.",
+  "rules": [
+    {
+      "ruleId": "DL-001",
+      "drug": {
+        "name": "Lisinopril",
+        "rxcui": "29046"
+      },
+      "lab": {
+        "name": "Potassium",
+        "loinc": "2823-3",
+        "unit": "mmol/L"
+      },
+      "operator": ">",
+      "threshold": 5.7,
+      "severity": "HIGH",
+      "title": "Lisinopril with elevated potassium",
+      "finding": "Elevated potassium is a medication-safety concern in a patient receiving lisinopril.",
+      "evidenceIds": [
+        "EVID-002"
+      ],
+      "thresholdNote": "5.7 mmol/L is used for this prototype because a current lisinopril label reports hyperkalemia in trials using serum potassium >5.7 mEq/L; this is not a universal treatment threshold."
+    },
+    {
+      "ruleId": "DL-002",
+      "drug": {
+        "name": "Metformin",
+        "rxcui": "6809"
+      },
+      "lab": {
+        "name": "eGFR",
+        "loinc": "98979-8",
+        "unit": "mL/min/{1.73_m2}"
+      },
+      "operator": "<",
+      "threshold": 30,
+      "severity": "HIGH",
+      "title": "Metformin with eGFR below 30",
+      "finding": "Metformin is contraindicated at this level of renal impairment.",
+      "evidenceIds": [
+        "EVID-004"
+      ]
+    },
+    {
+      "ruleId": "DL-003",
+      "drug": {
+        "name": "Insulin glargine",
+        "rxcui": "274783"
+      },
+      "lab": {
+        "name": "Glucose",
+        "loinc": "2345-7",
+        "unit": "mg/dL"
+      },
+      "operator": "<",
+      "threshold": 54,
+      "severity": "HIGH",
+      "title": "Insulin with level 2 hypoglycemia",
+      "finding": "Glucose is in the ADA level 2 hypoglycemia range while the patient is receiving insulin.",
+      "evidenceIds": [
+        "EVID-005",
+        "EVID-006"
+      ]
+    },
+    {
+      "ruleId": "DL-004",
+      "drug": {
+        "name": "Warfarin",
+        "rxcui": "11289"
+      },
+      "lab": {
+        "name": "INR",
+        "loinc": "6301-6",
+        "unit": "{INR}"
+      },
+      "operator": ">",
+      "threshold": 4.0,
+      "severity": "HIGH",
+      "title": "Warfarin with INR above 4",
+      "finding": "INR is above the level associated with increased bleeding risk in the warfarin label.",
+      "evidenceIds": [
+        "EVID-007"
+      ]
+    }
+  ]
+}

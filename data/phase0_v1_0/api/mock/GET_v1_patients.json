@@ -1,0 +1,74 @@
+{
+  "patients": [
+    {
+      "id": "P001",
+      "name": "Alex Demo",
+      "age": 67,
+      "sex": "male",
+      "scenarioLabel": "Lisinopril with elevated potassium"
+    },
+    {
+      "id": "P002",
+      "name": "Maya Demo",
+      "age": 71,
+      "sex": "female",
+      "scenarioLabel": "Warfarin plus aspirin"
+    },
+    {
+      "id": "P003",
+      "name": "Daniel Demo",
+      "age": 64,
+      "sex": "male",
+      "scenarioLabel": "Warfarin plus ibuprofen"
+    },
+    {
+      "id": "P004",
+      "name": "Priya Demo",
+      "age": 70,
+      "sex": "female",
+      "scenarioLabel": "Metformin with severe renal impairment"
+    },
+    {
+      "id": "P005",
+      "name": "Sam Demo",
+      "age": 48,
+      "sex": "male",
+      "scenarioLabel": "Insulin with level 2 hypoglycemia"
+    },
+    {
+      "id": "P006",
+      "name": "Emma Demo",
+      "age": 77,
+      "sex": "female",
+      "scenarioLabel": "Lisinopril plus ibuprofen"
+    },
+    {
+      "id": "P007",
+      "name": "Ravi Demo",
+      "age": 60,
+      "sex": "male",
+      "scenarioLabel": "Warfarin with INR above 4"
+    },
+    {
+      "id": "P008",
+      "name": "Lisa Demo",
+      "age": 68,
+      "sex": "female",
+      "scenarioLabel": "Multiple findings: lisinopril/ibuprofen plus elevated potassium"
+    },
+    {
+      "id": "P009",
+      "name": "Jordan Demo",
+      "age": 45,
+      "sex": "male",
+      "scenarioLabel": "Negative control: metformin with preserved renal function"
+    },
+    {
+      "id": "P010",
+      "name": "Nina Demo",
+      "age": 64,
+      "sex": "female",
+      "scenarioLabel": "Data gap: lisinopril without a recent potassium result"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "version": "1.0.0",
+  "ruleType": "DRUG_DRUG",
+  "severityDisclaimer": "Prototype severity classification only; not a validated clinical decision-support severity scale.",
+  "rules": [
+    {
+      "ruleId": "DDI-001",
+      "drugA": {
+        "name": "Warfarin",
+        "rxcui": "11289"
+      },
+      "drugB": {
+        "name": "Aspirin",
+        "rxcui": "1191"
+      },
+      "severity": "HIGH",
+      "title": "Warfarin with aspirin",
+      "finding": "Concurrent use can increase bleeding risk.",
+      "evidenceIds": [
+        "EVID-001"
+      ]
+    },
+    {
+      "ruleId": "DDI-002",
+      "drugA": {
+        "name": "Warfarin",
+        "rxcui": "11289"
+      },
+      "drugB": {
+        "name": "Ibuprofen",
+        "rxcui": "5640"
+      },
+      "severity": "HIGH",
+      "title": "Warfarin with ibuprofen",
+      "finding": "Concurrent use can increase bleeding risk.",
+      "evidenceIds": [
+        "EVID-001"
+      ]
+    },
+    {
+      "ruleId": "DDI-003",
+      "drugA": {
+        "name": "Lisinopril",
+        "rxcui": "29046"
+      },
+      "drugB": {
+        "name": "Ibuprofen",
+        "rxcui": "5640"
+      },
+      "severity": "MODERATE",
+      "title": "Lisinopril with ibuprofen",
+      "finding": "Concurrent NSAID use can worsen renal function in susceptible patients; renal function should be monitored.",
+      "evidenceIds": [
+        "EVID-003"
+      ]
+    }
+  ]
+}

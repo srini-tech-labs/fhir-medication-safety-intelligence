@@ -1,0 +1,27 @@
+{
+  "project": "FHIR Medication Safety Intelligence on AWS HealthLake",
+  "phase": "Phase 0 - Synthetic Clinical/FHIR Data Package",
+  "version": "1.0.0",
+  "frozenDate": "2026-09-18",
+  "patientCount": 10,
+  "fhirResourceCounts": {
+    "Binary": 4,
+    "DocumentReference": 4,
+    "Encounter": 10,
+    "MedicationRequest": 14,
+    "Observation": 11,
+    "Patient": 10
+  },
+  "clinicalRuleCounts": {
+    "drugDrug": 3,
+    "drugLab": 4,
+    "dataGap": 1
+  },
+  "goldenCases": 10,
+  "unstructuredNotePatients": [
+    "P002",
+    "P006",
+    "P008",
+    "P010"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "version": "1.0.0",
+  "important": "Evidence supports the clinical relationship. HIGH/MODERATE severity labels in this prototype are project classifications and are not validated CDS severity ratings.",
+  "evidence": [
+    {
+      "evidenceId": "EVID-001",
+      "title": "Warfarin with aspirin or ibuprofen increases bleeding risk",
+      "source": "DailyMed / FDA drug labeling",
+      "section": "Drug Interactions - Drugs that Increase Bleeding Risk",
+      "sourceUrl": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6b227c9e-02e9-4ec9-8b11-3ab6fe5093e5",
+      "summary": "The warfarin label lists aspirin among antiplatelet agents and ibuprofen among NSAIDs that increase bleeding risk when used with warfarin.",
+      "accessed": "2026-09-18"
+    },
+    {
+      "evidenceId": "EVID-002",
+      "title": "Lisinopril and hyperkalemia",
+      "source": "DailyMed / FDA drug labeling",
+      "section": "Warnings and Precautions - Hyperkalemia",
+      "sourceUrl": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d8a0c806-8f5e-41c0-91c6-ad267af27a53",
+      "summary": "The lisinopril label states that renin-angiotensin system inhibitors can cause hyperkalemia and recommends periodic serum potassium monitoring.",
+      "accessed": "2026-09-18"
+    },
+    {
+      "evidenceId": "EVID-003",
+      "title": "Lisinopril with NSAIDs can worsen renal function",
+      "source": "DailyMed / FDA drug labeling",
+      "section": "Drug Interactions - Non-Steroidal Anti-Inflammatory Agents",
+      "sourceUrl": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=9b2c04b9-783b-416f-9a2a-179ab8f9036e&type=display",
+      "summary": "The lisinopril label warns that concomitant NSAID use can deteriorate renal function in susceptible patients and advises periodic renal-function monitoring.",
+      "accessed": "2026-09-18"
+    },
+    {
+      "evidenceId": "EVID-004",
+      "title": "Metformin is contraindicated below eGFR 30",
+      "source": "DailyMed / FDA drug labeling",
+      "section": "Dosage and Administration - Renal Impairment; Contraindications",
+      "sourceUrl": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bfd6ec0f-8264-4877-aa6d-f347f53bc426",
+      "summary": "The metformin label states that use is contraindicated when eGFR is below 30 mL/min/1.73 m2.",
+      "accessed": "2026-09-18"
+    },
+    {
+      "evidenceId": "EVID-005",
+      "title": "Insulin glargine and hypoglycemia",
+      "source": "DailyMed / FDA drug labeling",
+      "section": "Warnings and Precautions - Hypoglycemia",
+      "sourceUrl": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ac85ebb-5594-59c8-77fd-df254329d151",
+      "summary": "The insulin glargine label identifies hypoglycemia as the most common adverse reaction and notes that severe hypoglycemia can be life-threatening.",
+      "accessed": "2026-09-18"
+    },
+    {
+      "evidenceId": "EVID-006",
+      "title": "ADA hypoglycemia thresholds",
+      "source": "American Diabetes Association Standards of Care in Diabetes—2026",
+      "section": "Hypoglycemia Definitions and Event Rates",
+      "sourceUrl": "https://diabetesjournals.org/care/article/49/Supplement_1/S132/163927/6-Glycemic-Goals-Hypoglycemia-and-Hyperglycemic",
+      "summary": "ADA defines level 1 hypoglycemia below 70 mg/dL and level 2 hypoglycemia below 54 mg/dL.",
+      "accessed": "2026-09-18"
+    },
+    {
+      "evidenceId": "EVID-007",
+      "title": "Warfarin INR above 4 is associated with higher bleeding risk",
+      "source": "DailyMed / FDA drug labeling",
+      "section": "Dosage and Administration",
+      "sourceUrl": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=b1bd0d02-eccb-4449-82b9-9b552835029e&type=display",
+      "summary": "The warfarin label states that INR above 4 generally provides no added therapeutic benefit for most patients and is associated with higher bleeding risk.",
+      "accessed": "2026-09-18"
+    }
+  ]
+}

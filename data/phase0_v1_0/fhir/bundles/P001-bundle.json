@@ -1,0 +1,198 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-p001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "https://example.org/fhir/CodeSystem/data-origin",
+        "code": "synthetic",
+        "display": "Synthetic demonstration data"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-p001",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://example.org/synthetic-patient-id",
+            "value": "P001"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "text": "Alex Demo",
+            "family": "Demo",
+            "given": [
+              "Alex"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1959-04-12"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "encounter-p001",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/patient-p001"
+        },
+        "period": {
+          "start": "2026-09-18T09:00:00-05:00",
+          "end": "2026-09-18T09:30:00-05:00"
+        },
+        "reasonCode": [
+          {
+            "text": "Lisinopril with elevated potassium"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "medreq-p001-01",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "29046",
+              "display": "Lisinopril"
+            }
+          ],
+          "text": "Lisinopril"
+        },
+        "subject": {
+          "reference": "Patient/patient-p001"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-p001"
+        },
+        "authoredOn": "2026-09-01",
+        "dosageInstruction": [
+          {
+            "text": "20 mg once daily"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-p001-01",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Potassium"
+        },
+        "subject": {
+          "reference": "Patient/patient-p001"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-p001"
+        },
+        "effectiveDateTime": "2026-09-17T08:00:00-05:00",
+        "valueQuantity": {
+          "value": 5.8,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 3.5,
+              "unit": "mmol/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "mmol/L"
+            },
+            "high": {
+              "value": 5.1,
+              "unit": "mmol/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "mmol/L"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

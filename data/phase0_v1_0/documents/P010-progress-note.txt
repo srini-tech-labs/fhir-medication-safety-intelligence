@@ -1,0 +1,1 @@
+Basic metabolic panel has been ordered but the result is not yet available. The application should report a data gap rather than invent or infer a potassium value.

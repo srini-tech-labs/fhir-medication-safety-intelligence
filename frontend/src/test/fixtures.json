@@ -1,0 +1,833 @@
+{
+ "patients": {
+  "patients": [
+   {
+    "id": "P001",
+    "name": "Alex Demo",
+    "age": 67,
+    "sex": "male",
+    "scenarioLabel": "Lisinopril with elevated potassium"
+   },
+   {
+    "id": "P002",
+    "name": "Maya Demo",
+    "age": 71,
+    "sex": "female",
+    "scenarioLabel": "Warfarin plus aspirin"
+   },
+   {
+    "id": "P003",
+    "name": "Daniel Demo",
+    "age": 64,
+    "sex": "male",
+    "scenarioLabel": "Warfarin plus ibuprofen"
+   },
+   {
+    "id": "P004",
+    "name": "Priya Demo",
+    "age": 70,
+    "sex": "female",
+    "scenarioLabel": "Metformin with severe renal impairment"
+   },
+   {
+    "id": "P005",
+    "name": "Sam Demo",
+    "age": 48,
+    "sex": "male",
+    "scenarioLabel": "Insulin with level 2 hypoglycemia"
+   },
+   {
+    "id": "P006",
+    "name": "Emma Demo",
+    "age": 77,
+    "sex": "female",
+    "scenarioLabel": "Lisinopril plus ibuprofen"
+   },
+   {
+    "id": "P007",
+    "name": "Ravi Demo",
+    "age": 60,
+    "sex": "male",
+    "scenarioLabel": "Warfarin with INR above 4"
+   },
+   {
+    "id": "P008",
+    "name": "Lisa Demo",
+    "age": 68,
+    "sex": "female",
+    "scenarioLabel": "Multiple findings: lisinopril/ibuprofen plus elevated potassium"
+   },
+   {
+    "id": "P009",
+    "name": "Jordan Demo",
+    "age": 45,
+    "sex": "male",
+    "scenarioLabel": "Negative control: metformin with preserved renal function"
+   },
+   {
+    "id": "P010",
+    "name": "Nina Demo",
+    "age": 64,
+    "sex": "female",
+    "scenarioLabel": "Data gap: lisinopril without a recent potassium result"
+   }
+  ]
+ },
+ "snapshots": {
+  "P001": {
+   "patient": {
+    "id": "P001",
+    "name": "Alex Demo",
+    "age": 67,
+    "sex": "male"
+   },
+   "medications": [
+    {
+     "name": "Lisinopril",
+     "rxCui": "29046",
+     "dosage": "20 mg once daily"
+    }
+   ],
+   "labs": [
+    {
+     "name": "Potassium",
+     "loinc": "2823-3",
+     "value": 5.8,
+     "unit": "mmol/L",
+     "interpretation": "H",
+     "effectiveDate": "2026-09-17",
+     "referenceRange": {
+      "low": 3.5,
+      "high": 5.1
+     }
+    }
+   ],
+   "documents": []
+  },
+  "P006": {
+   "patient": {
+    "id": "P006",
+    "name": "Emma Demo",
+    "age": 77,
+    "sex": "female"
+   },
+   "medications": [
+    {
+     "name": "Lisinopril",
+     "rxCui": "29046",
+     "dosage": "20 mg once daily"
+    },
+    {
+     "name": "Ibuprofen",
+     "rxCui": "5640",
+     "dosage": "400 mg twice daily as needed"
+    }
+   ],
+   "labs": [
+    {
+     "name": "eGFR",
+     "loinc": "98979-8",
+     "value": 52.0,
+     "unit": "mL/min/{1.73_m2}",
+     "interpretation": "L",
+     "effectiveDate": "2026-09-16",
+     "referenceRange": null
+    }
+   ],
+   "documents": [
+    {
+     "id": "DOC-P006-01",
+     "type": "Medication Reconciliation Note",
+     "date": "2026-09-18",
+     "title": "Medication Reconciliation Note - P006"
+    }
+   ]
+  },
+  "P008": {
+   "patient": {
+    "id": "P008",
+    "name": "Lisa Demo",
+    "age": 68,
+    "sex": "female"
+   },
+   "medications": [
+    {
+     "name": "Lisinopril",
+     "rxCui": "29046",
+     "dosage": "20 mg once daily"
+    },
+    {
+     "name": "Ibuprofen",
+     "rxCui": "5640",
+     "dosage": "400 mg every 8 hours as needed"
+    }
+   ],
+   "labs": [
+    {
+     "name": "Potassium",
+     "loinc": "2823-3",
+     "value": 5.9,
+     "unit": "mmol/L",
+     "interpretation": "H",
+     "effectiveDate": "2026-09-18",
+     "referenceRange": {
+      "low": 3.5,
+      "high": 5.1
+     }
+    },
+    {
+     "name": "eGFR",
+     "loinc": "98979-8",
+     "value": 48.0,
+     "unit": "mL/min/{1.73_m2}",
+     "interpretation": "L",
+     "effectiveDate": "2026-09-18",
+     "referenceRange": null
+    }
+   ],
+   "documents": [
+    {
+     "id": "DOC-P008-01",
+     "type": "Discharge Summary",
+     "date": "2026-09-18",
+     "title": "Discharge Summary - P008"
+    }
+   ]
+  },
+  "P009": {
+   "patient": {
+    "id": "P009",
+    "name": "Jordan Demo",
+    "age": 45,
+    "sex": "male"
+   },
+   "medications": [
+    {
+     "name": "Metformin",
+     "rxCui": "6809",
+     "dosage": "500 mg twice daily"
+    }
+   ],
+   "labs": [
+    {
+     "name": "eGFR",
+     "loinc": "98979-8",
+     "value": 82.0,
+     "unit": "mL/min/{1.73_m2}",
+     "interpretation": "N",
+     "effectiveDate": "2026-09-17",
+     "referenceRange": null
+    },
+    {
+     "name": "Glucose",
+     "loinc": "2345-7",
+     "value": 118.0,
+     "unit": "mg/dL",
+     "interpretation": "N",
+     "effectiveDate": "2026-09-17",
+     "referenceRange": {
+      "low": 70.0,
+      "high": null
+     }
+    }
+   ],
+   "documents": []
+  },
+  "P010": {
+   "patient": {
+    "id": "P010",
+    "name": "Nina Demo",
+    "age": 64,
+    "sex": "female"
+   },
+   "medications": [
+    {
+     "name": "Lisinopril",
+     "rxCui": "29046",
+     "dosage": "10 mg once daily"
+    }
+   ],
+   "labs": [],
+   "documents": [
+    {
+     "id": "DOC-P010-01",
+     "type": "Progress Note",
+     "date": "2026-09-18",
+     "title": "Progress Note - P010"
+    }
+   ]
+  }
+ },
+ "analyses": {
+  "P001": {
+   "analysisId": "AN-P001-001",
+   "patientId": "P001",
+   "status": "COMPLETED",
+   "overallSeverity": "HIGH",
+   "summary": {
+    "totalFindings": 1,
+    "high": 1,
+    "moderate": 0,
+    "low": 0,
+    "dataGaps": 0
+   },
+   "findings": [
+    {
+     "findingId": "F-P001-001",
+     "ruleId": "DL-001",
+     "type": "DRUG_LAB",
+     "severity": "HIGH",
+     "title": "Lisinopril with elevated potassium",
+     "evidence": {
+      "medications": [
+       {
+        "name": "Lisinopril",
+        "rxCui": "29046",
+        "dosage": "20 mg once daily"
+       }
+      ],
+      "labs": [
+       {
+        "name": "Potassium",
+        "loinc": "2823-3",
+        "value": 5.8,
+        "unit": "mmol/L",
+        "interpretation": "H",
+        "effectiveDate": "2026-09-17"
+       }
+      ]
+     },
+     "risk": "Elevated potassium is a medication-safety concern in a patient receiving lisinopril.",
+     "source": {
+      "type": "FDA_DRUG_LABEL",
+      "provider": "DailyMed",
+      "evidenceIds": [
+       "EVID-002"
+      ]
+     },
+     "provenance": {
+      "ruleVersion": "1.0.0",
+      "trigger": {
+       "operator": ">",
+       "threshold": 5.7,
+       "unit": "mmol/L",
+       "note": "5.7 mmol/L is used for this prototype because a current lisinopril label reports hyperkalemia in trials using serum potassium >5.7 mEq/L; this is not a universal treatment threshold."
+      },
+      "fhirResources": [
+       "MedicationRequest/medreq-p001-01",
+       "Observation/obs-p001-01"
+      ],
+      "evidence": [
+       {
+        "evidenceId": "EVID-002",
+        "title": "Lisinopril and hyperkalemia",
+        "source": "DailyMed / FDA drug labeling",
+        "section": "Warnings and Precautions - Hyperkalemia",
+        "sourceUrl": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d8a0c806-8f5e-41c0-91c6-ad267af27a53",
+        "summary": "The lisinopril label states that renin-angiotensin system inhibitors can cause hyperkalemia and recommends periodic serum potassium monitoring.",
+        "accessed": "2026-09-18",
+        "sourceType": "FDA_DRUG_LABEL",
+        "provider": "DailyMed"
+       }
+      ],
+      "severityDisclaimer": "Prototype severity classification only; not a validated clinical decision-support severity scale."
+     },
+     "fhir": {
+      "detectedIssueId": "di-p001-dl001"
+     }
+    }
+   ],
+   "dataGaps": [],
+   "riskAssessment": {
+    "id": "ra-p001-001",
+    "level": "HIGH",
+    "rationale": "Prototype qualitative summary derived from deterministic rule findings. No probability estimate is asserted.",
+    "basis": [
+     "MedicationRequest/medreq-p001-01",
+     "Observation/obs-p001-01"
+    ]
+   },
+   "aiExplanation": null,
+   "asOfDate": "2026-09-18",
+   "generatedAt": "2026-09-18T12:00:00+00:00",
+   "rulesVersion": "1.0.0"
+  },
+  "P006": {
+   "analysisId": "AN-P006-001",
+   "patientId": "P006",
+   "status": "COMPLETED",
+   "overallSeverity": "MODERATE",
+   "summary": {
+    "totalFindings": 1,
+    "high": 0,
+    "moderate": 1,
+    "low": 0,
+    "dataGaps": 1
+   },
+   "findings": [
+    {
+     "findingId": "F-P006-001",
+     "ruleId": "DDI-003",
+     "type": "DRUG_DRUG",
+     "severity": "MODERATE",
+     "title": "Lisinopril with ibuprofen",
+     "evidence": {
+      "medications": [
+       {
+        "name": "Lisinopril",
+        "rxCui": "29046",
+        "dosage": "20 mg once daily"
+       },
+       {
+        "name": "Ibuprofen",
+        "rxCui": "5640",
+        "dosage": "400 mg twice daily as needed"
+       }
+      ],
+      "labs": []
+     },
+     "risk": "Concurrent NSAID use can worsen renal function in susceptible patients; renal function should be monitored.",
+     "source": {
+      "type": "FDA_DRUG_LABEL",
+      "provider": "DailyMed",
+      "evidenceIds": [
+       "EVID-003"
+      ]
+     },
+     "provenance": {
+      "ruleVersion": "1.0.0",
+      "trigger": null,
+      "fhirResources": [
+       "MedicationRequest/medreq-p006-01",
+       "MedicationRequest/medreq-p006-02"
+      ],
+      "evidence": [
+       {
+        "evidenceId": "EVID-003",
+        "title": "Lisinopril with NSAIDs can worsen renal function",
+        "source": "DailyMed / FDA drug labeling",
+        "section": "Drug Interactions - Non-Steroidal Anti-Inflammatory Agents",
+        "sourceUrl": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=9b2c04b9-783b-416f-9a2a-179ab8f9036e&type=display",
+        "summary": "The lisinopril label warns that concomitant NSAID use can deteriorate renal function in susceptible patients and advises periodic renal-function monitoring.",
+        "accessed": "2026-09-18",
+        "sourceType": "FDA_DRUG_LABEL",
+        "provider": "DailyMed"
+       }
+      ],
+      "severityDisclaimer": "Prototype severity classification only; not a validated clinical decision-support severity scale."
+     },
+     "fhir": {
+      "detectedIssueId": "di-p006-ddi003"
+     }
+    }
+   ],
+   "dataGaps": [
+    {
+     "gapId": "G-P006-001",
+     "ruleId": "DG-001",
+     "type": "DATA_GAP",
+     "status": "NEEDS_DATA",
+     "title": "Recent potassium result unavailable",
+     "finding": "The prototype cannot complete the lisinopril/potassium safety check because no recent potassium result is available.",
+     "medication": {
+      "name": "Lisinopril",
+      "rxCui": "29046",
+      "dosage": "20 mg once daily"
+     },
+     "requiredLab": {
+      "name": "Potassium",
+      "loinc": "2823-3"
+     },
+     "lookbackDays": 90,
+     "source": {
+      "type": "FDA_DRUG_LABEL",
+      "provider": "DailyMed",
+      "evidenceIds": [
+       "EVID-002"
+      ]
+     },
+     "provenance": {
+      "ruleVersion": "1.0.0",
+      "trigger": null,
+      "fhirResources": [
+       "MedicationRequest/medreq-p006-01"
+      ],
+      "evidence": [
+       {
+        "evidenceId": "EVID-002",
+        "title": "Lisinopril and hyperkalemia",
+        "source": "DailyMed / FDA drug labeling",
+        "section": "Warnings and Precautions - Hyperkalemia",
+        "sourceUrl": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d8a0c806-8f5e-41c0-91c6-ad267af27a53",
+        "summary": "The lisinopril label states that renin-angiotensin system inhibitors can cause hyperkalemia and recommends periodic serum potassium monitoring.",
+        "accessed": "2026-09-18",
+        "sourceType": "FDA_DRUG_LABEL",
+        "provider": "DailyMed"
+       }
+      ],
+      "severityDisclaimer": null
+     }
+    }
+   ],
+   "riskAssessment": {
+    "id": "ra-p006-001",
+    "level": "MODERATE",
+    "rationale": "Prototype qualitative summary derived from deterministic rule findings. No probability estimate is asserted.",
+    "basis": [
+     "MedicationRequest/medreq-p006-01",
+     "MedicationRequest/medreq-p006-02",
+     "Observation/obs-p006-01"
+    ]
+   },
+   "aiExplanation": null,
+   "asOfDate": "2026-09-18",
+   "generatedAt": "2026-09-18T12:00:00+00:00",
+   "rulesVersion": "1.0.0"
+  },
+  "P008": {
+   "analysisId": "AN-P008-001",
+   "patientId": "P008",
+   "status": "COMPLETED",
+   "overallSeverity": "HIGH",
+   "summary": {
+    "totalFindings": 2,
+    "high": 1,
+    "moderate": 1,
+    "low": 0,
+    "dataGaps": 0
+   },
+   "findings": [
+    {
+     "findingId": "F-P008-001",
+     "ruleId": "DL-001",
+     "type": "DRUG_LAB",
+     "severity": "HIGH",
+     "title": "Lisinopril with elevated potassium",
+     "evidence": {
+      "medications": [
+       {
+        "name": "Lisinopril",
+        "rxCui": "29046",
+        "dosage": "20 mg once daily"
+       }
+      ],
+      "labs": [
+       {
+        "name": "Potassium",
+        "loinc": "2823-3",
+        "value": 5.9,
+        "unit": "mmol/L",
+        "interpretation": "H",
+        "effectiveDate": "2026-09-18"
+       }
+      ]
+     },
+     "risk": "Elevated potassium is a medication-safety concern in a patient receiving lisinopril.",
+     "source": {
+      "type": "FDA_DRUG_LABEL",
+      "provider": "DailyMed",
+      "evidenceIds": [
+       "EVID-002"
+      ]
+     },
+     "provenance": {
+      "ruleVersion": "1.0.0",
+      "trigger": {
+       "operator": ">",
+       "threshold": 5.7,
+       "unit": "mmol/L",
+       "note": "5.7 mmol/L is used for this prototype because a current lisinopril label reports hyperkalemia in trials using serum potassium >5.7 mEq/L; this is not a universal treatment threshold."
+      },
+      "fhirResources": [
+       "MedicationRequest/medreq-p008-01",
+       "Observation/obs-p008-01"
+      ],
+      "evidence": [
+       {
+        "evidenceId": "EVID-002",
+        "title": "Lisinopril and hyperkalemia",
+        "source": "DailyMed / FDA drug labeling",
+        "section": "Warnings and Precautions - Hyperkalemia",
+        "sourceUrl": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d8a0c806-8f5e-41c0-91c6-ad267af27a53",
+        "summary": "The lisinopril label states that renin-angiotensin system inhibitors can cause hyperkalemia and recommends periodic serum potassium monitoring.",
+        "accessed": "2026-09-18",
+        "sourceType": "FDA_DRUG_LABEL",
+        "provider": "DailyMed"
+       }
+      ],
+      "severityDisclaimer": "Prototype severity classification only; not a validated clinical decision-support severity scale."
+     },
+     "fhir": {
+      "detectedIssueId": "di-p008-dl001"
+     }
+    },
+    {
+     "findingId": "F-P008-002",
+     "ruleId": "DDI-003",
+     "type": "DRUG_DRUG",
+     "severity": "MODERATE",
+     "title": "Lisinopril with ibuprofen",
+     "evidence": {
+      "medications": [
+       {
+        "name": "Lisinopril",
+        "rxCui": "29046",
+        "dosage": "20 mg once daily"
+       },
+       {
+        "name": "Ibuprofen",
+        "rxCui": "5640",
+        "dosage": "400 mg every 8 hours as needed"
+       }
+      ],
+      "labs": []
+     },
+     "risk": "Concurrent NSAID use can worsen renal function in susceptible patients; renal function should be monitored.",
+     "source": {
+      "type": "FDA_DRUG_LABEL",
+      "provider": "DailyMed",
+      "evidenceIds": [
+       "EVID-003"
+      ]
+     },
+     "provenance": {
+      "ruleVersion": "1.0.0",
+      "trigger": null,
+      "fhirResources": [
+       "MedicationRequest/medreq-p008-01",
+       "MedicationRequest/medreq-p008-02"
+      ],
+      "evidence": [
+       {
+        "evidenceId": "EVID-003",
+        "title": "Lisinopril with NSAIDs can worsen renal function",
+        "source": "DailyMed / FDA drug labeling",
+        "section": "Drug Interactions - Non-Steroidal Anti-Inflammatory Agents",
+        "sourceUrl": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=9b2c04b9-783b-416f-9a2a-179ab8f9036e&type=display",
+        "summary": "The lisinopril label warns that concomitant NSAID use can deteriorate renal function in susceptible patients and advises periodic renal-function monitoring.",
+        "accessed": "2026-09-18",
+        "sourceType": "FDA_DRUG_LABEL",
+        "provider": "DailyMed"
+       }
+      ],
+      "severityDisclaimer": "Prototype severity classification only; not a validated clinical decision-support severity scale."
+     },
+     "fhir": {
+      "detectedIssueId": "di-p008-ddi003"
+     }
+    }
+   ],
+   "dataGaps": [],
+   "riskAssessment": {
+    "id": "ra-p008-001",
+    "level": "HIGH",
+    "rationale": "Prototype qualitative summary derived from deterministic rule findings. No probability estimate is asserted.",
+    "basis": [
+     "MedicationRequest/medreq-p008-01",
+     "MedicationRequest/medreq-p008-02",
+     "Observation/obs-p008-01",
+     "Observation/obs-p008-02"
+    ]
+   },
+   "aiExplanation": null,
+   "asOfDate": "2026-09-18",
+   "generatedAt": "2026-09-18T12:00:00+00:00",
+   "rulesVersion": "1.0.0"
+  },
+  "P009": {
+   "analysisId": "AN-P009-001",
+   "patientId": "P009",
+   "status": "COMPLETED",
+   "overallSeverity": "NONE",
+   "summary": {
+    "totalFindings": 0,
+    "high": 0,
+    "moderate": 0,
+    "low": 0,
+    "dataGaps": 0
+   },
+   "findings": [],
+   "dataGaps": [],
+   "riskAssessment": {
+    "id": "ra-p009-001",
+    "level": "NONE",
+    "rationale": "Prototype qualitative summary derived from deterministic rule findings. No probability estimate is asserted.",
+    "basis": [
+     "MedicationRequest/medreq-p009-01",
+     "Observation/obs-p009-01",
+     "Observation/obs-p009-02"
+    ]
+   },
+   "aiExplanation": null,
+   "asOfDate": "2026-09-18",
+   "generatedAt": "2026-09-18T12:00:00+00:00",
+   "rulesVersion": "1.0.0"
+  },
+  "P010": {
+   "analysisId": "AN-P010-001",
+   "patientId": "P010",
+   "status": "COMPLETED",
+   "overallSeverity": "NEEDS_DATA",
+   "summary": {
+    "totalFindings": 0,
+    "high": 0,
+    "moderate": 0,
+    "low": 0,
+    "dataGaps": 1
+   },
+   "findings": [],
+   "dataGaps": [
+    {
+     "gapId": "G-P010-001",
+     "ruleId": "DG-001",
+     "type": "DATA_GAP",
+     "status": "NEEDS_DATA",
+     "title": "Recent potassium result unavailable",
+     "finding": "The prototype cannot complete the lisinopril/potassium safety check because no recent potassium result is available.",
+     "medication": {
+      "name": "Lisinopril",
+      "rxCui": "29046",
+      "dosage": "10 mg once daily"
+     },
+     "requiredLab": {
+      "name": "Potassium",
+      "loinc": "2823-3"
+     },
+     "lookbackDays": 90,
+     "source": {
+      "type": "FDA_DRUG_LABEL",
+      "provider": "DailyMed",
+      "evidenceIds": [
+       "EVID-002"
+      ]
+     },
+     "provenance": {
+      "ruleVersion": "1.0.0",
+      "trigger": null,
+      "fhirResources": [
+       "MedicationRequest/medreq-p010-01"
+      ],
+      "evidence": [
+       {
+        "evidenceId": "EVID-002",
+        "title": "Lisinopril and hyperkalemia",
+        "source": "DailyMed / FDA drug labeling",
+        "section": "Warnings and Precautions - Hyperkalemia",
+        "sourceUrl": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d8a0c806-8f5e-41c0-91c6-ad267af27a53",
+        "summary": "The lisinopril label states that renin-angiotensin system inhibitors can cause hyperkalemia and recommends periodic serum potassium monitoring.",
+        "accessed": "2026-09-18",
+        "sourceType": "FDA_DRUG_LABEL",
+        "provider": "DailyMed"
+       }
+      ],
+      "severityDisclaimer": null
+     }
+    }
+   ],
+   "riskAssessment": {
+    "id": "ra-p010-001",
+    "level": "NEEDS_DATA",
+    "rationale": "Prototype qualitative summary derived from deterministic rule findings. No probability estimate is asserted.",
+    "basis": [
+     "MedicationRequest/medreq-p010-01"
+    ]
+   },
+   "aiExplanation": null,
+   "asOfDate": "2026-09-18",
+   "generatedAt": "2026-09-18T12:00:00+00:00",
+   "rulesVersion": "1.0.0"
+  }
+ },
+ "explanations": {
+  "P001": {
+   "text": "The deterministic rule engine produced 1 finding (1 HIGH) with an overall result of HIGH. This explanation restates those results only; it does not add findings or change severity.\n\nObserved data: the structured record lists an active order for Lisinopril (RxNorm 29046, 20 mg once daily) and a result of Potassium 5.8 mmol/L on 2026-09-17 (flagged high). Rule interpretation: rule DL-001 classifies this as HIGH because the result is above the configured threshold of 5.7 mmol/L. Elevated potassium is a medication-safety concern in a patient receiving lisinopril. Supporting evidence: EVID-002 (DailyMed / FDA drug labeling).",
+   "summary": "The deterministic rule engine produced 1 finding (1 HIGH) with an overall result of HIGH. This explanation restates those results only; it does not add findings or change severity.",
+   "findingExplanations": [
+    {
+     "ruleId": "DL-001",
+     "explanation": "Observed data: the structured record lists an active order for Lisinopril (RxNorm 29046, 20 mg once daily) and a result of Potassium 5.8 mmol/L on 2026-09-17 (flagged high). Rule interpretation: rule DL-001 classifies this as HIGH because the result is above the configured threshold of 5.7 mmol/L. Elevated potassium is a medication-safety concern in a patient receiving lisinopril. Supporting evidence: EVID-002 (DailyMed / FDA drug labeling)."
+    }
+   ],
+   "dataGapExplanation": null,
+   "groundedInFindingsOnly": true,
+   "mode": "mock",
+   "model": null,
+   "fallbackCode": null,
+   "fallbackReason": null
+  },
+  "P006": {
+   "text": "The deterministic rule engine produced 1 finding (1 MODERATE) with an overall result of MODERATE. It also reported 1 data gap: a configured check could not be completed because required data are missing. This explanation restates those results only; it does not add findings or change severity. A clinical note (Medication Reconciliation Note) is on file and was treated as context only; it did not create or change any finding.\n\nObserved data: the structured record lists active orders for Lisinopril (RxNorm 29046, 20 mg once daily) and Ibuprofen (RxNorm 5640, 400 mg twice daily as needed). Rule interpretation: rule DDI-003 classifies this as MODERATE. Concurrent NSAID use can worsen renal function in susceptible patients; renal function should be monitored. Supporting evidence: EVID-003 (DailyMed / FDA drug labeling).\n\nRule DG-001 requires a Potassium result (LOINC 2823-3) within the last 90 days for patients with an active Lisinopril order (RxNorm 29046). None is available in the structured record, so that check could not be completed. No value has been estimated or assumed.",
+   "summary": "The deterministic rule engine produced 1 finding (1 MODERATE) with an overall result of MODERATE. It also reported 1 data gap: a configured check could not be completed because required data are missing. This explanation restates those results only; it does not add findings or change severity. A clinical note (Medication Reconciliation Note) is on file and was treated as context only; it did not create or change any finding.",
+   "findingExplanations": [
+    {
+     "ruleId": "DDI-003",
+     "explanation": "Observed data: the structured record lists active orders for Lisinopril (RxNorm 29046, 20 mg once daily) and Ibuprofen (RxNorm 5640, 400 mg twice daily as needed). Rule interpretation: rule DDI-003 classifies this as MODERATE. Concurrent NSAID use can worsen renal function in susceptible patients; renal function should be monitored. Supporting evidence: EVID-003 (DailyMed / FDA drug labeling)."
+    }
+   ],
+   "dataGapExplanation": "Rule DG-001 requires a Potassium result (LOINC 2823-3) within the last 90 days for patients with an active Lisinopril order (RxNorm 29046). None is available in the structured record, so that check could not be completed. No value has been estimated or assumed.",
+   "groundedInFindingsOnly": true,
+   "mode": "mock",
+   "model": null,
+   "fallbackCode": null,
+   "fallbackReason": null
+  },
+  "P008": {
+   "text": "The deterministic rule engine produced 2 findings (1 HIGH and 1 MODERATE) with an overall result of HIGH. This explanation restates those results only; it does not add findings or change severity. A clinical note (Discharge Summary) is on file and was treated as context only; it did not create or change any finding.\n\nObserved data: the structured record lists an active order for Lisinopril (RxNorm 29046, 20 mg once daily) and a result of Potassium 5.9 mmol/L on 2026-09-18 (flagged high). Rule interpretation: rule DL-001 classifies this as HIGH because the result is above the configured threshold of 5.7 mmol/L. Elevated potassium is a medication-safety concern in a patient receiving lisinopril. Supporting evidence: EVID-002 (DailyMed / FDA drug labeling).\n\nObserved data: the structured record lists active orders for Lisinopril (RxNorm 29046, 20 mg once daily) and Ibuprofen (RxNorm 5640, 400 mg every 8 hours as needed). Rule interpretation: rule DDI-003 classifies this as MODERATE. Concurrent NSAID use can worsen renal function in susceptible patients; renal function should be monitored. Supporting evidence: EVID-003 (DailyMed / FDA drug labeling).",
+   "summary": "The deterministic rule engine produced 2 findings (1 HIGH and 1 MODERATE) with an overall result of HIGH. This explanation restates those results only; it does not add findings or change severity. A clinical note (Discharge Summary) is on file and was treated as context only; it did not create or change any finding.",
+   "findingExplanations": [
+    {
+     "ruleId": "DL-001",
+     "explanation": "Observed data: the structured record lists an active order for Lisinopril (RxNorm 29046, 20 mg once daily) and a result of Potassium 5.9 mmol/L on 2026-09-18 (flagged high). Rule interpretation: rule DL-001 classifies this as HIGH because the result is above the configured threshold of 5.7 mmol/L. Elevated potassium is a medication-safety concern in a patient receiving lisinopril. Supporting evidence: EVID-002 (DailyMed / FDA drug labeling)."
+    },
+    {
+     "ruleId": "DDI-003",
+     "explanation": "Observed data: the structured record lists active orders for Lisinopril (RxNorm 29046, 20 mg once daily) and Ibuprofen (RxNorm 5640, 400 mg every 8 hours as needed). Rule interpretation: rule DDI-003 classifies this as MODERATE. Concurrent NSAID use can worsen renal function in susceptible patients; renal function should be monitored. Supporting evidence: EVID-003 (DailyMed / FDA drug labeling)."
+    }
+   ],
+   "dataGapExplanation": null,
+   "groundedInFindingsOnly": true,
+   "mode": "mock",
+   "model": null,
+   "fallbackCode": null,
+   "fallbackReason": null
+  },
+  "P009": {
+   "text": "No configured rule fired for this patient's structured medications and labs. This is not a statement that the regimen is clinically safe; the prototype checks only a small, curated rule set.",
+   "summary": "No configured rule fired for this patient's structured medications and labs. This is not a statement that the regimen is clinically safe; the prototype checks only a small, curated rule set.",
+   "findingExplanations": [],
+   "dataGapExplanation": null,
+   "groundedInFindingsOnly": true,
+   "mode": "mock",
+   "model": null,
+   "fallbackCode": null,
+   "fallbackReason": null
+  },
+  "P010": {
+   "text": "The rule engine could not complete a configured check because required data are missing (overall status NEEDS_DATA). No clinical finding was produced. This explanation restates those results only; it does not add findings or change severity. A clinical note (Progress Note) is on file and was treated as context only; it did not create or change any finding.\n\nRule DG-001 requires a Potassium result (LOINC 2823-3) within the last 90 days for patients with an active Lisinopril order (RxNorm 29046). None is available in the structured record, so that check could not be completed. No value has been estimated or assumed.",
+   "summary": "The rule engine could not complete a configured check because required data are missing (overall status NEEDS_DATA). No clinical finding was produced. This explanation restates those results only; it does not add findings or change severity. A clinical note (Progress Note) is on file and was treated as context only; it did not create or change any finding.",
+   "findingExplanations": [],
+   "dataGapExplanation": "Rule DG-001 requires a Potassium result (LOINC 2823-3) within the last 90 days for patients with an active Lisinopril order (RxNorm 29046). None is available in the structured record, so that check could not be completed. No value has been estimated or assumed.",
+   "groundedInFindingsOnly": true,
+   "mode": "mock",
+   "model": null,
+   "fallbackCode": null,
+   "fallbackReason": null
+  }
+ },
+ "documents": {
+  "DOC-P008-01": {
+   "id": "DOC-P008-01",
+   "type": "Discharge Summary",
+   "date": "2026-09-18",
+   "title": "Discharge Summary - P008",
+   "text": "Recent discharge summary lists lisinopril as a chronic medication and ibuprofen as an as-needed medication. Potassium was elevated on follow-up testing."
+  },
+  "DOC-P010-01": {
+   "id": "DOC-P010-01",
+   "type": "Progress Note",
+   "date": "2026-09-18",
+   "title": "Progress Note - P010",
+   "text": "Basic metabolic panel has been ordered but the result is not yet available. The application should report a data gap rather than invent or infer a potassium value."
+  }
+ }
+}

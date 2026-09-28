@@ -1,0 +1,199 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-p007",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "https://example.org/fhir/CodeSystem/data-origin",
+        "code": "synthetic",
+        "display": "Synthetic demonstration data"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-p007",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://example.org/synthetic-patient-id",
+            "value": "P007"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "text": "Ravi Demo",
+            "family": "Demo",
+            "given": [
+              "Ravi"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1966-02-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "encounter-p007",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/patient-p007"
+        },
+        "period": {
+          "start": "2026-09-18T09:00:00-05:00",
+          "end": "2026-09-18T09:30:00-05:00"
+        },
+        "reasonCode": [
+          {
+            "text": "Warfarin with INR above 4"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "medreq-p007-01",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "11289",
+              "display": "Warfarin"
+            }
+          ],
+          "text": "Warfarin"
+        },
+        "subject": {
+          "reference": "Patient/patient-p007"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-p007"
+        },
+        "authoredOn": "2026-09-01",
+        "dosageInstruction": [
+          {
+            "text": "5 mg once daily"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-p007-01",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6301-6",
+              "display": "INR in Platelet poor plasma by Coagulation assay"
+            }
+          ],
+          "text": "INR"
+        },
+        "subject": {
+          "reference": "Patient/patient-p007"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-p007"
+        },
+        "effectiveDateTime": "2026-09-18T08:00:00-05:00",
+        "valueQuantity": {
+          "value": 4.8,
+          "unit": "{INR}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{INR}"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 2.0,
+              "unit": "{INR}",
+              "system": "http://unitsofmeasure.org",
+              "code": "{INR}"
+            },
+            "high": {
+              "value": 3.0,
+              "unit": "{INR}",
+              "system": "http://unitsofmeasure.org",
+              "code": "{INR}"
+            },
+            "text": "Synthetic therapeutic target for demonstration only."
+          }
+        ]
+      }
+    }
+  ]
+}

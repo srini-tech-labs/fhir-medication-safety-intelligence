@@ -1,0 +1,172 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-p010",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "https://example.org/fhir/CodeSystem/data-origin",
+        "code": "synthetic",
+        "display": "Synthetic demonstration data"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-p010",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://example.org/synthetic-patient-id",
+            "value": "P010"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "text": "Nina Demo",
+            "family": "Demo",
+            "given": [
+              "Nina"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1961-12-01"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "encounter-p010",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/patient-p010"
+        },
+        "period": {
+          "start": "2026-09-18T09:00:00-05:00",
+          "end": "2026-09-18T09:30:00-05:00"
+        },
+        "reasonCode": [
+          {
+            "text": "Data gap: lisinopril without a recent potassium result"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "medreq-p010-01",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "29046",
+              "display": "Lisinopril"
+            }
+          ],
+          "text": "Lisinopril"
+        },
+        "subject": {
+          "reference": "Patient/patient-p010"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-p010"
+        },
+        "authoredOn": "2026-09-01",
+        "dosageInstruction": [
+          {
+            "text": "10 mg once daily"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Binary",
+        "id": "bin-p010-note",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "contentType": "text/plain",
+        "data": "QmFzaWMgbWV0YWJvbGljIHBhbmVsIGhhcyBiZWVuIG9yZGVyZWQgYnV0IHRoZSByZXN1bHQgaXMgbm90IHlldCBhdmFpbGFibGUuIFRoZSBhcHBsaWNhdGlvbiBzaG91bGQgcmVwb3J0IGEgZGF0YSBnYXAgcmF0aGVyIHRoYW4gaW52ZW50IG9yIGluZmVyIGEgcG90YXNzaXVtIHZhbHVlLg=="
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "docref-p010-note",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "status": "current",
+        "type": {
+          "text": "Progress Note"
+        },
+        "subject": {
+          "reference": "Patient/patient-p010"
+        },
+        "date": "2026-09-18T10:00:00-05:00",
+        "description": "Synthetic unstructured note for demonstration. Context only; not an independent source of safety findings in v1.",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "url": "Binary/bin-p010-note",
+              "title": "Progress Note - P010"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-p006",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "https://example.org/fhir/CodeSystem/data-origin",
+        "code": "synthetic",
+        "display": "Synthetic demonstration data"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-p006",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://example.org/synthetic-patient-id",
+            "value": "P006"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "text": "Emma Demo",
+            "family": "Demo",
+            "given": [
+              "Emma"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1949-05-08"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "encounter-p006",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/patient-p006"
+        },
+        "period": {
+          "start": "2026-09-18T09:00:00-05:00",
+          "end": "2026-09-18T09:30:00-05:00"
+        },
+        "reasonCode": [
+          {
+            "text": "Lisinopril plus ibuprofen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "medreq-p006-01",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "29046",
+              "display": "Lisinopril"
+            }
+          ],
+          "text": "Lisinopril"
+        },
+        "subject": {
+          "reference": "Patient/patient-p006"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-p006"
+        },
+        "authoredOn": "2026-09-01",
+        "dosageInstruction": [
+          {
+            "text": "20 mg once daily"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "medreq-p006-02",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "5640",
+              "display": "Ibuprofen"
+            }
+          ],
+          "text": "Ibuprofen"
+        },
+        "subject": {
+          "reference": "Patient/patient-p006"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-p006"
+        },
+        "authoredOn": "2026-09-01",
+        "dosageInstruction": [
+          {
+            "text": "400 mg twice daily as needed"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-p006-01",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "98979-8",
+              "display": "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M"
+            }
+          ],
+          "text": "eGFR"
+        },
+        "subject": {
+          "reference": "Patient/patient-p006"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-p006"
+        },
+        "effectiveDateTime": "2026-09-16T08:00:00-05:00",
+        "valueQuantity": {
+          "value": 52,
+          "unit": "mL/min/{1.73_m2}",
+          "system": "http://unitsofmeasure.org",
+          "code": "mL/min/{1.73_m2}"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "L"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Binary",
+        "id": "bin-p006-note",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "contentType": "text/plain",
+        "data": "TWVkaWNhdGlvbiByZWNvbmNpbGlhdGlvbiBkb2N1bWVudHMgb3Zlci10aGUtY291bnRlciBpYnVwcm9mZW4gdXNlIGZvciBrbmVlIHBhaW4gd2hpbGUgdGhlIHBhdGllbnQgaXMgdGFraW5nIGxpc2lub3ByaWwuIFRoaXMgbm90ZSBpcyBjb250ZXh0IG9ubHkgYW5kIG11c3Qgbm90IGNyZWF0ZSBhIG5ldyBmaW5kaW5nIGJ5IGl0c2VsZi4="
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "docref-p006-note",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/data-origin",
+              "code": "synthetic",
+              "display": "Synthetic demonstration data"
+            }
+          ]
+        },
+        "status": "current",
+        "type": {
+          "text": "Medication Reconciliation Note"
+        },
+        "subject": {
+          "reference": "Patient/patient-p006"
+        },
+        "date": "2026-09-18T10:00:00-05:00",
+        "description": "Synthetic unstructured note for demonstration. Context only; not an independent source of safety findings in v1.",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "url": "Binary/bin-p006-note",
+              "title": "Medication Reconciliation Note - P006"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

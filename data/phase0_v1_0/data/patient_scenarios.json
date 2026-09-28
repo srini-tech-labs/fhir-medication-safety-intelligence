@@ -1,0 +1,297 @@
+[
+  {
+    "patientId": "P001",
+    "name": "Alex Demo",
+    "gender": "male",
+    "birthDate": "1959-04-12",
+    "scenario": "Lisinopril with elevated potassium",
+    "overall": "HIGH",
+    "medications": [
+      [
+        "Lisinopril",
+        "20 mg once daily"
+      ]
+    ],
+    "labs": [
+      [
+        "Potassium",
+        5.8,
+        "mmol/L",
+        "H",
+        "2026-09-17"
+      ]
+    ],
+    "note": null,
+    "expectedRules": [
+      "DL-001"
+    ]
+  },
+  {
+    "patientId": "P002",
+    "name": "Maya Demo",
+    "gender": "female",
+    "birthDate": "1954-11-03",
+    "scenario": "Warfarin plus aspirin",
+    "overall": "HIGH",
+    "medications": [
+      [
+        "Warfarin",
+        "5 mg once daily"
+      ],
+      [
+        "Aspirin",
+        "81 mg once daily"
+      ]
+    ],
+    "labs": [
+      [
+        "INR",
+        2.6,
+        "{INR}",
+        "N",
+        "2026-09-17"
+      ]
+    ],
+    "note": "Patient reports easy bruising over the past week. Medication reconciliation confirms warfarin and daily low-dose aspirin. No active bleeding reported in this synthetic note.",
+    "noteType": "Progress Note",
+    "expectedRules": [
+      "DDI-001"
+    ]
+  },
+  {
+    "patientId": "P003",
+    "name": "Daniel Demo",
+    "gender": "male",
+    "birthDate": "1962-06-19",
+    "scenario": "Warfarin plus ibuprofen",
+    "overall": "HIGH",
+    "medications": [
+      [
+        "Warfarin",
+        "5 mg once daily"
+      ],
+      [
+        "Ibuprofen",
+        "400 mg every 8 hours as needed"
+      ]
+    ],
+    "labs": [
+      [
+        "INR",
+        2.8,
+        "{INR}",
+        "N",
+        "2026-09-17"
+      ]
+    ],
+    "note": null,
+    "expectedRules": [
+      "DDI-002"
+    ]
+  },
+  {
+    "patientId": "P004",
+    "name": "Priya Demo",
+    "gender": "female",
+    "birthDate": "1956-01-21",
+    "scenario": "Metformin with severe renal impairment",
+    "overall": "HIGH",
+    "medications": [
+      [
+        "Metformin",
+        "500 mg twice daily"
+      ]
+    ],
+    "labs": [
+      [
+        "eGFR",
+        26,
+        "mL/min/{1.73_m2}",
+        "L",
+        "2026-09-17"
+      ]
+    ],
+    "note": null,
+    "expectedRules": [
+      "DL-002"
+    ]
+  },
+  {
+    "patientId": "P005",
+    "name": "Sam Demo",
+    "gender": "male",
+    "birthDate": "1978-09-14",
+    "scenario": "Insulin with level 2 hypoglycemia",
+    "overall": "HIGH",
+    "medications": [
+      [
+        "Insulin glargine",
+        "20 units subcutaneously nightly"
+      ]
+    ],
+    "labs": [
+      [
+        "Glucose",
+        52,
+        "mg/dL",
+        "L",
+        "2026-09-18"
+      ]
+    ],
+    "note": null,
+    "expectedRules": [
+      "DL-003"
+    ]
+  },
+  {
+    "patientId": "P006",
+    "name": "Emma Demo",
+    "gender": "female",
+    "birthDate": "1949-05-08",
+    "scenario": "Lisinopril plus ibuprofen",
+    "overall": "MODERATE",
+    "medications": [
+      [
+        "Lisinopril",
+        "20 mg once daily"
+      ],
+      [
+        "Ibuprofen",
+        "400 mg twice daily as needed"
+      ]
+    ],
+    "labs": [
+      [
+        "eGFR",
+        52,
+        "mL/min/{1.73_m2}",
+        "L",
+        "2026-09-16"
+      ]
+    ],
+    "note": "Medication reconciliation documents over-the-counter ibuprofen use for knee pain while the patient is taking lisinopril. This note is context only and must not create a new finding by itself.",
+    "noteType": "Medication Reconciliation Note",
+    "expectedRules": [
+      "DDI-003"
+    ]
+  },
+  {
+    "patientId": "P007",
+    "name": "Ravi Demo",
+    "gender": "male",
+    "birthDate": "1966-02-10",
+    "scenario": "Warfarin with INR above 4",
+    "overall": "HIGH",
+    "medications": [
+      [
+        "Warfarin",
+        "5 mg once daily"
+      ]
+    ],
+    "labs": [
+      [
+        "INR",
+        4.8,
+        "{INR}",
+        "H",
+        "2026-09-18"
+      ]
+    ],
+    "note": null,
+    "expectedRules": [
+      "DL-004"
+    ]
+  },
+  {
+    "patientId": "P008",
+    "name": "Lisa Demo",
+    "gender": "female",
+    "birthDate": "1958-08-02",
+    "scenario": "Multiple findings: lisinopril/ibuprofen plus elevated potassium",
+    "overall": "HIGH",
+    "medications": [
+      [
+        "Lisinopril",
+        "20 mg once daily"
+      ],
+      [
+        "Ibuprofen",
+        "400 mg every 8 hours as needed"
+      ]
+    ],
+    "labs": [
+      [
+        "Potassium",
+        5.9,
+        "mmol/L",
+        "H",
+        "2026-09-18"
+      ],
+      [
+        "eGFR",
+        48,
+        "mL/min/{1.73_m2}",
+        "L",
+        "2026-09-18"
+      ]
+    ],
+    "note": "Recent discharge summary lists lisinopril as a chronic medication and ibuprofen as an as-needed medication. Potassium was elevated on follow-up testing.",
+    "noteType": "Discharge Summary",
+    "expectedRules": [
+      "DDI-003",
+      "DL-001"
+    ]
+  },
+  {
+    "patientId": "P009",
+    "name": "Jordan Demo",
+    "gender": "male",
+    "birthDate": "1981-03-28",
+    "scenario": "Negative control: metformin with preserved renal function",
+    "overall": "NONE",
+    "medications": [
+      [
+        "Metformin",
+        "500 mg twice daily"
+      ]
+    ],
+    "labs": [
+      [
+        "eGFR",
+        82,
+        "mL/min/{1.73_m2}",
+        "N",
+        "2026-09-17"
+      ],
+      [
+        "Glucose",
+        118,
+        "mg/dL",
+        "N",
+        "2026-09-17"
+      ]
+    ],
+    "note": null,
+    "expectedRules": []
+  },
+  {
+    "patientId": "P010",
+    "name": "Nina Demo",
+    "gender": "female",
+    "birthDate": "1961-12-01",
+    "scenario": "Data gap: lisinopril without a recent potassium result",
+    "overall": "NEEDS_DATA",
+    "medications": [
+      [
+        "Lisinopril",
+        "10 mg once daily"
+      ]
+    ],
+    "labs": [],
+    "note": "Basic metabolic panel has been ordered but the result is not yet available. The application should report a data gap rather than invent or infer a potassium value.",
+    "noteType": "Progress Note",
+    "expectedRules": [
+      "DG-001"
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "codingSystem": "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "conceptLevel": "ingredient",
+  "note": "Ingredient-level RxCUIs are intentionally used for deterministic rule matching in this prototype. A production implementation would normally preserve the ordered product/SCD/SBD code and normalize to ingredient(s) for rule evaluation.",
+  "medications": [
+    {
+      "name": "Lisinopril",
+      "rxcui": "29046",
+      "termType": "IN",
+      "pronunciationFriendly": true
+    },
+    {
+      "name": "Warfarin",
+      "rxcui": "11289",
+      "termType": "IN",
+      "pronunciationFriendly": true
+    },
+    {
+      "name": "Aspirin",
+      "rxcui": "1191",
+      "termType": "IN",
+      "pronunciationFriendly": true
+    },
+    {
+      "name": "Ibuprofen",
+      "rxcui": "5640",
+      "termType": "IN",
+      "pronunciationFriendly": true
+    },
+    {
+      "name": "Metformin",
+      "rxcui": "6809",
+      "termType": "IN",
+      "pronunciationFriendly": true
+    },
+    {
+      "name": "Insulin glargine",
+      "rxcui": "274783",
+      "termType": "IN",
+      "pronunciationFriendly": true
+    }
+  ],
+  "verification": {
+    "recommendedAtBuildTime": "Re-resolve names with the NLM RxNorm API before production use.",
+    "apiDoc": "https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxNorm.findRxcuiByString.html"
+  }
+}

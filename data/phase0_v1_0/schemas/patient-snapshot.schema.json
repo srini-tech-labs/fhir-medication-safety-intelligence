@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/patient-snapshot.schema.json",
+  "title": "Patient Snapshot",
+  "type": "object",
+  "required": [
+    "patient",
+    "medications",
+    "labs",
+    "documents"
+  ],
+  "properties": {
+    "patient": {
+      "type": "object"
+    },
+    "medications": {
+      "type": "array"
+    },
+    "labs": {
+      "type": "array"
+    },
+    "documents": {
+      "type": "array"
+    }
+  }
+}

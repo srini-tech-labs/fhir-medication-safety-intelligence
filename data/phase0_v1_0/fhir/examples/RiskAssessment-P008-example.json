@@ -1,0 +1,50 @@
+{
+  "resourceType": "RiskAssessment",
+  "id": "ra-p008-001",
+  "meta": {
+    "tag": [
+      {
+        "system": "https://example.org/fhir/CodeSystem/data-origin",
+        "code": "synthetic",
+        "display": "Synthetic demonstration data"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/patient-p008"
+  },
+  "occurrenceDateTime": "2026-09-18T12:00:00-05:00",
+  "basis": [
+    {
+      "reference": "MedicationRequest/medreq-p008-01"
+    },
+    {
+      "reference": "MedicationRequest/medreq-p008-02"
+    },
+    {
+      "reference": "Observation/obs-p008-01"
+    },
+    {
+      "reference": "Observation/obs-p008-02"
+    }
+  ],
+  "prediction": [
+    {
+      "outcome": {
+        "text": "Medication-related adverse event"
+      },
+      "qualitativeRisk": {
+        "coding": [
+          {
+            "system": "https://example.org/fhir/CodeSystem/med-safety-risk-level",
+            "code": "high",
+            "display": "High"
+          }
+        ]
+      },
+      "rationale": "Prototype qualitative summary derived from deterministic rule findings. No probability estimate is asserted."
+    }
+  ],
+  "mitigation": "Prototype output only. No patient-specific treatment recommendation is generated."
+}

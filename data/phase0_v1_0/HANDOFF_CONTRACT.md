@@ -3,7 +3,7 @@
 ## Source of truth
 This Phase 0 package is the frozen source of truth for clinical demo data and deterministic expected outcomes.
 
-### Claude/application code MUST use
+### Application code MUST use
 - `data/patient_scenarios.json`
 - `fhir/bundles/`
 - `rules/*.json`

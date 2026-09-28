@@ -1,4 +1,4 @@
-# Claude Build Brief — Phases 1, 2, and 3
+# Implementation Build Brief — Phases 1, 2, and 3
 
 Build a clean, production-shaped demo from this package. Do not redesign the clinical data contract.
 

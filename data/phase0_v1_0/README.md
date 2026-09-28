@@ -15,12 +15,12 @@ This ZIP is the complete Phase 0 handoff for the AWS HealthLake medication-safet
 - HealthLake-ready NDJSON grouped by resource type.
 - Stable application REST contract and JSON schemas.
 - AI explanation guardrails.
-- Claude build brief for Phases 1–3.
+- Implementation build brief for Phases 1–3.
 
 ## Start here
 1. Read `HANDOFF_CONTRACT.md`.
-2. Give `CLAUDE_BUILD_BRIEF.md` plus the full ZIP to Claude.
-3. Require Claude to run all golden tests in `expected/expected_results.json`.
+2. Follow `IMPLEMENTATION_BUILD_BRIEF.md` alongside the full ZIP.
+3. Run all golden tests in `expected/expected_results.json`.
 4. Do not create AWS HealthLake yet.
 5. Build local -> S3/Lambda/API Gateway first.
 6. We introduce HealthLake only after the app works end to end.
